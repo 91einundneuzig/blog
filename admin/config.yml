@@ -1,16 +1,32 @@
 backend:
-  name: github
-  repo: 9einundneunzig/blog
+  name: git-gateway
   branch: main
 
 media_folder: "uploads"
 public_folder: "/uploads"
 
 collections:
-  - name: "test"
-    label: "Test Collection"
-    folder: "test"
+  - name: "posts"
+    label: "Beiträge"
+    folder: "posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Titel", name: "title", widget: "string" }
+      - { label: "Veröffentlichungsdatum", name: "date", widget: "datetime" }
+      - { label: "Inhalt", name: "body", widget: "markdown" }
+  - name: "live"
+    label: "Livemeldungen"
+    folder: "live"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Meldung", name: "message", widget: "string" }
+      - { label: "Zeit", name: "date", widget: "datetime" }
+  - name: "themen"
+    label: "Themen"
+    folder: "themen"
     create: true
     slug: "{{slug}}"
     fields:
-      - { label: "Titel", name: "title", widget: "string" }
+      - { label: "Themenname", name: "title", widget: "string" }

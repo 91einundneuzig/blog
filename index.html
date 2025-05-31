@@ -2,11 +2,177 @@
 <html lang="de">
 <head>
     <meta charset="UTF-8">
-    <title>Mein Blog</title>
+    <title>NowVibe</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Inter:wght@300;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-    <h1>Willkommen auf meinem Blog!</h1>
-    <p>Dies ist meine erste selbst gebaute Website mit eigenem CSS.</p>
+    <div class="center-container">
+        <header>
+            <div class="logo">
+                <span class="logo-thin">Now</span><span class="logo-bold">Vibe</span>
+            </div>
+            <div class="header-widgets">
+                <div class="clock-widgets" id="clocks"></div>
+            </div>
+        </header>
+        <nav>
+            <ul>
+                <li>
+                    <a href="#">Home</a>
+                </li>
+                <li>
+                    <a href="#">Themen</a>
+                    <ul class="dropdown">
+                        <li><a href="#">Politik</a></li>
+                        <li><a href="#">Kultur</a></li>
+                        <li><a href="#">Musik</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Posts</a>
+                    <ul class="dropdown">
+                        <li><a href="#">Letzte Beiträge</a></li>
+                        <li><a href="#">Beliebte Beiträge</a></li>
+                        <li><a href="#">Archiv</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Kontakt</a>
+                </li>
+            </ul>
+            <button class="search-toggle" aria-label="Suche öffnen">
+                <!-- Minimalistische, hellgraue Lupe als SVG -->
+                <svg width="27" height="27" viewBox="0 0 27 27" fill="none">
+                    <circle cx="12" cy="12" r="8.5" stroke="#b7b8bc" stroke-width="2"/>
+                    <rect x="18" y="18" width="2.4" height="8" rx="1.2" transform="rotate(45 18 18)" fill="#b7b8bc"/>
+                </svg>
+            </button>
+            <form class="search-form" action="#" method="get" autocomplete="off">
+                <input type="search" name="q" placeholder="Hier findest Du Dein Glück." aria-label="Seite durchsuchen" />
+                <button type="submit" aria-label="Suchen">
+                    <svg width="27" height="27" viewBox="0 0 27 27" fill="none">
+                        <circle cx="12" cy="12" r="8.5" stroke="#b7b8bc" stroke-width="2"/>
+                        <rect x="18" y="18" width="2.4" height="8" rx="1.2" transform="rotate(45 18 18)" fill="#b7b8bc"/>
+                    </svg>
+                </button>
+                <button type="button" class="search-close" aria-label="Suche schließen">&times;</button>
+            </form>
+        </nav>
+        <div class="live-bar">
+            <span class="live-dot"></span>
+            <span class="live-title">LIVE:</span>
+            <span class="live-message">Muster: Breaking News – Dies ist eine Beispiel-Live-Meldung!</span>
+        </div>
+        <section class="top-themen">
+            <span class="top-themen-title">Im Gespräch:</span>
+            <button>Thema 1</button>
+            <button>Thema 2</button>
+            <button>Thema 3</button>
+            <button>Thema 4</button>
+        </section>
+        <hr class="themen-divider">
+        <main>
+            <article class="post">
+                <h2>Neuer Post: Modernes Beatmaking</h2>
+                <p>Entdecke die neuesten Techniken und Tools im Bereich Blackbeats-Produktion. Wir zeigen dir, wie du deinen Sound auf das nächste Level bringst!</p>
+            </article>
+            <article class="post">
+                <h2>Interview: Producer X im Talk</h2>
+                <p>Exklusive Einblicke und Inspirationen von einem der angesagtesten Beatmacher der Szene.</p>
+            </article>
+            <article class="post">
+                <h2>Workshop: Deine ersten eigenen Beats</h2>
+                <p>Schritt-für-Schritt-Anleitung für Einsteiger – so startest du mit minimalem Equipment und maximaler Kreativität.</p>
+            </article>
+        </main>
+        <div class="subfooter">
+            <div class="subfooter-row">
+                <a href="#">Impressum</a>
+                <a href="#">Datenschutzerklärung</a>
+                <a href="#">Privacy Center</a>
+                <a href="#">Nutzungsbedingungen</a>
+            </div>
+            <div class="subfooter-socials">
+                <a href="#" aria-label="Facebook" class="social"><svg width="20" height="20" fill="none" viewBox="0 0 24 24"><path d="M17.5 2h-3A5.5 5.5 0 0 0 9 7.5V10H6v4h3v8h4v-8h3l1-4h-4V7.5A1.5 1.5 0 0 1 14.5 6h3V2z" stroke="#bcbfc5" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                <a href="#" aria-label="X (Twitter)" class="social"><svg width="20" height="20" fill="none" viewBox="0 0 24 24"><path d="M3 3l18 18M21 3L3 21" stroke="#bcbfc5" stroke-width="1.8" stroke-linecap="round"/><path d="M17 3h4v4" stroke="#bcbfc5" stroke-width="1.8" stroke-linecap="round"/></svg></a>
+                <a href="#" aria-label="Instagram" class="social"><svg width="20" height="20" fill="none" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5" stroke="#bcbfc5" stroke-width="1.8"/><circle cx="12" cy="12" r="5" stroke="#bcbfc5" stroke-width="1.8"/><circle cx="17.5" cy="6.5" r="1" fill="#bcbfc5"/></svg></a>
+                <a href="#" aria-label="RSS" class="social"><svg width="20" height="20" fill="none" viewBox="0 0 24 24"><circle cx="6.18" cy="17.82" r="2.18" fill="#bcbfc5"/><path d="M4 11a9 9 0 0 1 9 9M4 4a16 16 0 0 1 16 16" stroke="#bcbfc5" stroke-width="1.9" stroke-linecap="round"/></svg></a>
+            </div>
+            <div class="subfooter-copyright">
+                &copy; 2025 NowVibe
+            </div>
+        </div>
+        <div class="partnerlinks">
+            <div class="partner-col">
+                <div class="partner-title">Partner A</div>
+                <a href="#">Partnerlink 1</a>
+                <a href="#">Partnerlink 2</a>
+            </div>
+            <div class="partner-col">
+                <div class="partner-title">Partner B</div>
+                <a href="#">Partnerlink 1</a>
+                <a href="#">Partnerlink 2</a>
+            </div>
+            <div class="partner-col">
+                <div class="partner-title">Partner C</div>
+                <a href="#">Partnerlink 1</a>
+                <a href="#">Partnerlink 2</a>
+            </div>
+            <div class="partner-col">
+                <div class="partner-title">Partner D</div>
+                <a href="#">Partnerlink 1</a>
+                <a href="#">Partnerlink 2</a>
+            </div>
+        </div>
+    </div>
+    <script>
+        // Suche öffnen/schließen
+        document.querySelector('.search-toggle').addEventListener('click', function() {
+            document.querySelector('.search-form').classList.add('active');
+            document.querySelector('nav ul').style.visibility = 'hidden';
+            this.style.visibility = 'hidden';
+            document.querySelector('.search-form input').focus();
+        });
+        document.querySelector('.search-close').addEventListener('click', function() {
+            document.querySelector('.search-form').classList.remove('active');
+            document.querySelector('nav ul').style.visibility = '';
+            document.querySelector('.search-toggle').style.visibility = '';
+        });
+        document.querySelector('.search-form input').addEventListener('keydown', function(e){
+            if(e.key === "Escape"){
+                document.querySelector('.search-close').click();
+            }
+        });
+
+        // Minimalistische Weltuhr
+        function pad(n) { return n < 10 ? '0'+n : n; }
+        function getWeekdayName(dt) {
+            return ["So","Mo","Di","Mi","Do","Fr","Sa"][dt.getDay()];
+        }
+        function updateClocks() {
+            const zones = [
+                { city: "Frankfurt", tz: "Europe/Berlin" },
+                { city: "London", tz: "Europe/London" },
+                { city: "New York", tz: "America/New_York" },
+                { city: "Tokio", tz: "Asia/Tokyo" }
+            ];
+            let html = "";
+            zones.forEach((z,i) => {
+                const now = new Date();
+                const time = now.toLocaleTimeString('de-DE', {
+                    hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false, timeZone: z.tz
+                });
+                let day = now;
+                try { day = new Date(now.toLocaleString("en-US", {timeZone: z.tz})); } catch(e){}
+                if(i>0) html += ' <span class="clock-sep">|</span> ';
+                html += `<span class="clock-city">${z.city}</span> <span class="clock-time">${getWeekdayName(day)}, ${pad(day.getDate())}.${pad(day.getMonth()+1)}. ${time}</span>`;
+            });
+            document.getElementById('clocks').innerHTML = html;
+        }
+        updateClocks();
+        setInterval(updateClocks, 1000);
+    </script>
 </body>
 </html>
